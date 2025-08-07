@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #111;
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  max-width: 95%;
+}
+
+h1 {
+  font-size: 1.8em;
+  min-height: 50px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #007acc;
+}
+
+.mensagem {
+  margin-top: 30px;
+  opacity: 0;
+  display: none;
+  transition: opacity 0.8s ease;
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+.music-layer {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  background: rgba(30, 144, 255, 0.85);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s;
+  z-index: 10000;
+}
+
+.music-layer:hover {
+  background: rgba(30, 144, 255, 1);
+}
+
+.music-layer button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  user-select: none;
+}
+
+
+

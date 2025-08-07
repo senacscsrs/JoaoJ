@@ -5,6 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Site do João</title>
   <style>
+    body {
+  cursor: none;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: red;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  animation: seguirMouse 0.01s infinite linear;
+}
+
+@keyframes seguirMouse {
+  from { left: var(--x); top: var(--y); }
+  to { left: var(--x); top: var(--y); }
+}
+
+    
     * {
       margin: 0;
       padding: 0;
@@ -126,6 +149,7 @@
       <a href="galeria.html">Galeria</a>
       <a href="sobre.html">Sobre mim </a>
     </nav>
+    <button id="toggleTheme">🌙 Modo Escuro</button>
   </header>
 
   <main>
@@ -157,6 +181,64 @@
       btnCor.style.color = bg;
     };
   </script>
+<script>
+  document.addEventListener('click', function(e) {
+    const emoji = document.createElement('div');
+    emoji.textContent = '🙉';
+    emoji.style.position = 'absolute';
+    emoji.style.left = `${e.clientX}px`;
+    emoji.style.top = `${e.clientY}px`;
+    emoji.style.fontSize = '4rem';
+    emoji.style.pointerEvents = 'none';
+    emoji.style.animation = 'voar 1s ease-out forwards';
+    document.body.appendChild(emoji);
+
+    setTimeout(() => {
+      emoji.remove();
+    }, 1000);
+  });
+
+  const style = document.createElement('style');
+  style.innerHTML = `
+    @keyframes voar {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100px) scale(0.5);
+        opacity: 0;
+      }
+    }
+  `;
+  document.head.appendChild(style);
+</script>
+<script>
+document.addEventListener('mousemove', function(e) {
+  const bolinha = document.createElement('div');
+  bolinha.style.position = 'absolute';
+  bolinha.style.left = e.pageX + 'px';
+  bolinha.style.top = e.pageY + 'px';
+  bolinha.style.width = '8px';
+  bolinha.style.height = '8px';
+  bolinha.style.borderRadius = '50%';
+  bolinha.style.backgroundColor = 'red';
+  bolinha.style.pointerEvents = 'none';
+  bolinha.style.zIndex = 9999;
+  bolinha.style.opacity = 0.8;
+  bolinha.style.transition = 'all 0.4s ease-out';
+  document.body.appendChild(bolinha);
+
+  setTimeout(() => {
+    bolinha.style.transform = 'scale(0)';
+    bolinha.style.opacity = 0;
+  }, 10);
+
+  setTimeout(() => {
+    bolinha.remove();
+  }, 400);
+});
+</script>
 
 </body>
 </html>

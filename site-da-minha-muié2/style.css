@@ -47,12 +47,14 @@ h1 {
 
 .typing {
   font-size: 1.2em;
-  white-space: nowrap;
+  white-space: normal; /* <-- permite quebra de linha */
+  word-wrap: break-word;
   border-right: 2px solid white;
-  width: 100%;
   overflow: hidden;
   animation: typing 4s steps(40, end), blink 0.7s step-end infinite;
 }
+
+
 
 @keyframes typing {
   from { width: 0; }
@@ -98,12 +100,6 @@ h1 {
   50% { transform: scale(1.1) rotate(-45deg); }
   100% { transform: scale(1) rotate(-45deg); }
 }
-
-.music-button {
-  position: fixed;
-  bottom: 20px;
-  right:
-}
 .galeria-button {
   position: fixed;
   bottom: 20px;
@@ -126,3 +122,14 @@ h1 {
   color: white;
   box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
 }
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+    margin: 5vh auto;
+  }
+
+  .typing {
+    font-size: 1em;
+  }
+}
+

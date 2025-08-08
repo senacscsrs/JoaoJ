@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nossas Fotos</title>
+  <style>
+    body {
+      background: #1e0029;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #ff9ff3;
+    }
+
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .galeria img {
+      width: 250px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+      transition: transform 0.3s ease;
+    }
+    .voltar-button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #ffffff;
+  color: #e91e63;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(255, 20, 147, 0.4);
+  transition: all 0.3s ease;
+}
+
+.voltar-button:hover {
+  background: #000000;
+  color: rgb(38, 36, 36);
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.6);
+}
+
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+    <a class="voltar-button" href="index.html">🔙 Voltar ao Início</a>
+
+  <h1> Somos tryhard🤯 </h1>
+  <div class="galeria">
+    <img src="imagem1.jpeg" alt="Foto 1">
+    <img src="imagem2.jpeg" alt="Foto 2">
+  </div>
+  
+</body>
+</html>

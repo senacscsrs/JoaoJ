@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de Viagem</title>
+</head>
+<body>
+<script>
+let nome = prompt("Qual o seu nome?");
+let distancia = parseFloat(prompt("Qual a distância da viagem em km?"));
+let velocidade = parseFloat(prompt("Qual a velocidade média em km/h?"));
+let consumo = parseFloat(prompt("Quantos km por litro o carro faz?"));
+let preco = parseFloat(prompt("Qual o preço da gasolina por litro?"));
+
+let tempo = distancia / velocidade;
+let litros = distancia / consumo;
+let gasto = litros * preco;
+
+let mensagem = "Olá " + nome + "!\n" +
+              "Tempo estimado: " + tempo.toFixed(2) + " horas\n" +
+              "Litros necessários: " + litros.toFixed(2) + " L\n" +
+              "Gasto total: R$ " + gasto.toFixed(2);
+
+alert(mensagem);
+console.log(mensagem);
+</script>
+</body>
+</html>

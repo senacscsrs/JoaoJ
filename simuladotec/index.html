@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homenagem à Minha Família</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1 class="centralizado">Homenagem à Minha Família</h1>
+
+    <h2>Um pouco sobre nós</h2>
+
+    <p class="caixa">
+        Minha família é a base de tudo que eu sou.
+    </p>
+    <p class="caixa">
+        Cada momento juntos é especial e cheio de alegria.
+    </p>
+    <p class="caixa">
+        Este site é um pequeno agradecimento por tudo o que representam para mim.
+    </p>
+ 
+    <h2>Momentos especiais</h2>
+    <ul id="listaMomentos"></ul>
+
+    <img src="FOTOFAMILIA.jpeg" alt="Foto da família" class="img-centro">
+
+    <button class="btn" onclick="mostrarFrase()">Mostrar frase especial</button>
+    <p id="frase" class="texto-destaque centralizado" style="display:none;">Família é a nossa maior conquista!</p>
+
+    <br><br>
+
+    <button class="btn secondary" onclick="escolherFamiliar()">Escolher Familiar</button>
+    <p id="mensagemEscolha"></p>
+
+    <h2>Lista automática de familiares</h2>
+    <ul id="listaFamilia"></ul>
+
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
